@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Dummy form</title>
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <style>
+    section { margin-top: 2em; }
+    xsection { page-break-inside: avoid; }
+    /* not using fieldset: Firefox page-break bug #471015 */
+    h3, label { display: block; margin: 0; margin-bottom: 0.5ex; }
+    h3 { page-break-after: avoid; }
+    content { display: block; column-gap: 2em; }
+    content { page-break-before: avoid;  }
+    .cols-2 content { column-count: 2; }
+    .cols-3 content { column-count: 3; }
+    .cols-4 content { column-count: 4; }
+    .cols-5 content { column-count: 5; }
+    .nums label { display: inline-block; width: 24%; }
+  </style>
+</head><body>
+
+<h1>Dummy form</h1>
+
+<form name="dummy" action="none://" method="get"><script>
+/*jslint indent: 2, maxlen: 80, continue: false, unparam: false, browser: true */
+(function () {
+  'use strict';
+  var df = document.forms.dummy, uniqueId = 0;
+
+  function addBox(c, h) {
+    var s = document.createElement('section');
+    if (h.join) { h = h.join('\n  '); }
+    s.innerHTML = '<h3>' + c + '</h3><content>\n  ' + h + '\n</content>\n';
+    s.className = (addBox.cls || '');
+    df.appendChild(s);
+    return s;
+  }
+  addBox.cls = 'cols-2';
+
+  function addChk(q, a) {
+    return addBox(q, a.map(function (c) {
+      return '<label><input type="checkbox"' +
+        ((c.length + a.length) % 2 ? '' : ' checked="checked"') +
+        '> ' + c + '</label>';
+    }));
+  }
+
+  addChk.digits = function (d, x, rx) {
+    return addChk('What digits are in ' + d + '?', String(x
+      ).match(rx || /^\S{4}|\S/g).concat('Lots more'));
+  };
+
+  function addRadios(q, a, sel) {
+    uniqueId += 1;
+    return addBox(q, a.map(function (c, idx) {
+      return '<label><input type="radio" name="r' + uniqueId + '"' +
+        (idx === sel ? ' checked="checked"' : '') + '> ' + c + '</label>';
+    }));
+  }
+
+  addChk('Which PDF versions do you use?', [ 'older',
+    '1.2', '1.3', '1.4', 'later', "Don't know" ]);
+
+  addChk('Which colors do you print often?', [ 'black', 'gray',
+    'red', 'green', 'blue', 'cyan', 'magenta', 'yellow',
+    'gold', 'silver', 'ultraviolet', 'The Colour Out of Space' ]);
+
+  addBox.cls = 'nums';
+  addChk.digits('&pi;', Math.PI, /^\S{4}|\S(?=\S)/g);
+  addChk.digits('sin(1)', Math.sin(1));
+  addChk.digits('cos(1)', Math.cos(1));
+
+  addBox.cls = 'cols-3';
+  addRadios('Which GNU core utility do you like best?', [
+    'arch', 'base64', 'basename', 'cat', 'chcon', 'chgrp', 'chmod', 'chown',
+    'chroot', 'cksum', 'comm', 'cp', 'csplit', 'cut', 'date', 'dd', 'df',
+    'dir', 'dircolors', 'dirname', 'du', 'echo', 'env', 'expand', 'expr',
+    'factor', 'false', 'flock', 'fmt', 'fold', 'groups', 'head', 'hostid',
+    'id', 'install', 'join', 'link', 'ln', 'logname', 'ls', 'md5sum',
+    'mkdir', 'mkfifo', 'mknod', 'mktemp', 'mv', 'nice', 'nl', 'nohup',
+    'nproc', 'od', 'paste', 'pathchk', 'pinky', 'pr', 'printenv', 'printf',
+    'ptx', 'pwd', 'readlink', 'rm', 'rmdir', 'runcon', 'sha*sum', 'seq',
+    'shred', 'sleep', 'sort', 'split', 'stat', 'stty', 'sum', 'sync', 'tac',
+    'tail', 'tee', 'test', 'timeout', 'touch', 'tr', 'true', 'truncate',
+    'tsort', 'tty', 'uname', 'unexpand', 'uniq', 'unlink', 'users', 'vdir',
+    'wc', 'who', 'whoami', 'yes',
+    'one not in the list' ], 1);
+
+  addRadios('Which utility in package moreutils do you like best?', [
+    'combine', 'errno', 'ifdata', 'ifne', 'isutf8', 'lckdo', 'mispipe',
+    'parallel', 'pee', 'sponge', 'ts', 'vidir', 'vipe', 'zrun',
+    'one not in the list' ], 9);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return;
+}());
+</script>
+
+<section><input type="submit"> <input type="reset"></section>
+
+</form>
+
+</body></html>

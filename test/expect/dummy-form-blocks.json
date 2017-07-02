@@ -1,0 +1,132 @@
+﻿[ null
+
+,"§blocks",
+{ "incomplete": true,
+  "version": "1.5",
+  "verMajor": 1,
+  "verMinor": 5,
+  "blocks": [ {
+      "type": "%",
+      "loca": { "fromByte": 0, "toByte": 15, "lenBytes": 15,
+        "fromLine": 0, "toLine": 2, "lenLines": 2 },
+      "preview": "%PDF-1.5\n%µí®û\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 15, "toByte": 2114, "lenBytes": 2099,
+        "fromLine": 2, "toLine": 25, "lenLines": 23 },
+      "preview": "3 0 obj\n<< /Length 4 0 R\n /Filter /FlateDecode\n>>\nstream\nx\u009C½\u009CÛnã … ·_ö\u0001Lk¿\u009Cþ\u0003aMñ\u0084\nendstream\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 2114, "toByte": 2137, "lenBytes": 23,
+        "fromLine": 25, "toLine": 28, "lenLines": 3 },
+      "preview": "4 0 obj\n   2022\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 2137, "toByte": 3045, "lenBytes": 908,
+        "fromLine": 28, "toLine": 40, "lenLines": 12 },
+      "preview": "2 0 obj\n<<\n /ExtGState <<\n /a0 << /CA 1 /ca 1 >>\n >>\n /Pattern < … 0 R\n /f-1-0 7 0 R\n >>\n>>\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 3045, "toByte": 3246, "lenBytes": 201,
+        "fromLine": 40, "toLine": 53, "lenLines": 13 },
+      "preview": "71 0 obj\n<< /Type /Page\n /Parent 1 0 R\n /MediaBox [ 0 0 595 841  …  >>\n /Resources 2 0 R\n>>\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 3246, "toByte": 3460, "lenBytes": 214,
+        "fromLine": 53, "toLine": 68, "lenLines": 15 },
+      "preview": "73 0 obj\n<< /Length 74 0 R\n /Filter /FlateDecode\n /Type /XObject … \u008F\nFEÉ\u0016¥\t\u0000\u0000m¨à \nendstream\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 3460, "toByte": 3482, "lenBytes": 22,
+        "fromLine": 68, "toLine": 71, "lenLines": 3 },
+      "preview": "74 0 obj\n   21\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 3482, "toByte": 3741, "lenBytes": 259,
+        "fromLine": 71, "toLine": 87, "lenLines": 16 },
+      "preview": "72 0 obj\n<< /Length 75 0 R\n /Filter /FlateDecode\n /Type /XObject … FM É\u0084Q@\t\u0000\u0000\u009D|ù\u0015\nendstream\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    "(… +1069 …)",
+    { "type": "obj",
+      "loca": { "fromByte": 207673, "toByte": 208108, "lenBytes": 435,
+        "fromLine": 10177, "toLine": 10190, "lenLines": 13 },
+      "preview": "1079 0 obj\n<< /Type /Font\n /Subtype /CIDFontType2\n /BaseFont /BT … 00 634 524 787 694 ]]\n>>\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 208108, "toByte": 208272, "lenBytes": 164,
+        "fromLine": 10190, "toLine": 10199, "lenLines": 9 },
+      "preview": "7 0 obj\n<< /Type /Font\n /Subtype /Type0\n /BaseFont /BTCNBI+DejaV … \n /ToUnicode 1076 0 R\n>>\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 208272, "toByte": 208354, "lenBytes": 82,
+        "fromLine": 10199, "toLine": 10205, "lenLines": 6 },
+      "preview": "1 0 obj\n<< /Type /Pages\n   /Kids [ 71 0 R 490 0 R 986 0 R ]\n   /Count 3\n>>\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 208354, "toByte": 208482, "lenBytes": 128,
+        "fromLine": 10205, "toLine": 10210, "lenLines": 5 },
+      "preview": "1080 0 obj\n<< /Creator (cairo 1.9.5 (http://cairographics.org))\n … //cairographics.org))\n>>\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "obj",
+      "loca": { "fromByte": 208482, "toByte": 208537, "lenBytes": 55,
+        "fromLine": 10210, "toLine": 10215, "lenLines": 5 },
+      "preview": "1081 0 obj\n<< /Type /Catalog\n   /Pages 1 0 R\n>>\nendobj\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "xref",
+      "loca": { "fromByte": 208537, "toByte": 230189, "lenBytes": 21652,
+        "fromLine": 10215, "toLine": 11299, "lenLines": 1084 },
+      "preview": "xref\n0 1082\n0000000000 65535 f \n0000208272 00000 n \n0000002137 0 … 54 00000 n \n0000208482 00000 n \n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "trailer",
+      "loca": { "fromByte": 230189, "toByte": 230267, "lenBytes": 78,
+        "fromLine": 11299, "toLine": 11306, "lenLines": 7 },
+      "preview": "trailer\n<< /Size 1082\n   /Root 1081 0 R\n   /Info 1080 0 R\n>>\nstartxref\n208537\n",
+      "getData": { "ƒunc": null }
+    },
+    { "type": "%",
+      "loca": { "fromByte": 230267, "toByte": 230273, "lenBytes": 6,
+        "fromLine": 11306, "toLine": 11307, "lenLines": 1 },
+      "preview": "%%EOF\n",
+      "getData": { "ƒunc": null }
+    } ],
+  "blockIndexBy": {
+    "add": { "ƒunc": "blockIndexAdd" },
+    "type": {
+      "%": [ 0, 1084 ],
+      "obj": [ 1, 2, 3, 4, 5, 6, 7, 8, "(… +1065 …)", 1074, 1075, 1076, 1077, 1078, 1079, 1080, 1081 ],
+      "xref": [ 1082 ],
+      "trailer": [ 1083 ] },
+    "offset": {
+      "0": [ 0 ],
+      "15": [ 1 ],
+      "2114": [ 2 ],
+      "2137": [ 3 ],
+      "3045": [ 4 ],
+      "3246": [ 5 ],
+      "3460": [ 6 ],
+      "3482": [ 7 ],
+      "3741": "(… +1069 …)",
+      "207673": [ 1077 ],
+      "208108": [ 1078 ],
+      "208272": [ 1079 ],
+      "208354": [ 1080 ],
+      "208482": [ 1081 ],
+      "208537": [ 1082 ],
+      "230189": [ 1083 ],
+      "230267": [ 1084 ] } } }
+
+,"§" ]

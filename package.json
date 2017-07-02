@@ -1,0 +1,39 @@
+{ "name": "scan-pdf-blocks-pmb",
+  "version": "0.1.0",
+  "description": "Parse the outer structure of some¹ PDF documents, and offer to parse some of the deeper structures. (¹ see readme for supported styles)",
+  "keywords": [ "pdf", "portable document format" ],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/scan-pdf-blocks-pmb-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/scan-pdf-blocks-pmb-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/scan-pdf-blocks-pmb-js/issues"
+  },
+  "contributors": [],
+
+  "private": false, "license": "ISC",
+
+  "main": "scan.js",
+  "scripts": { "test": "nodejs test/all.js" },
+  "directories": { "test": "test" },
+
+  "dependencies": {
+    "getoraddkey-simple": "^0.1.4",
+    "inspect-as-json-pmb": "^0.1.2",
+    "string-peeks": "^0.0.9",
+    "univeil": "^0.1.9"
+  },
+  "devDependencies": {
+    "absdir": "^1.0.2",
+    "equal-pmb": "^0.1.11",
+    "read-resolved-file-sync": "^1.0.1",
+    "usnam-pmb": "^0.2.3"
+  },
+  "browserify": { "transform": [ "brfs" ] },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}

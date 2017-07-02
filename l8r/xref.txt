@@ -1,0 +1,21 @@
+﻿/*jslint indent: 2, maxlen: 80, continue: false, unparam: false, node: true */
+/* -*- tab-width: 2 -*- */
+'use strict';
+
+    function readXrefSection() {
+      var sIdx = sects.length, sId = numIfNum(rxm(1)), clLen = +rxm(2),
+        sect = { id: sId, claimedLength: clLen, order: sIdx };
+      sects[sIdx] = sect;
+      if (id2idx[sId] === undefined) {
+        id2idx[sId] = sIdx;
+      } else {
+        anomaly('Duplicate xref section ID', sect);
+      }
+      peek.eat();
+
+    }
+
+    blk.sections = sects = [];
+    blk.id2idx = id2idx = Object.create(null);
+
+    while (rxm(peek.peekLine(), /^(\d+)\s+(\d+)\n$/)) { readXrefSection(); }
