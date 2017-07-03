@@ -22,7 +22,7 @@ from [test/dummy-form-blocks.js](test/dummy-form-blocks.js):
 
 <!--#include file="test/dummy-form-blocks.js" start="  //#u" stop="  //#r"
   outdent="  " code="javascript" -->
-<!--#verbatim lncnt="13" -->
+<!--#verbatim lncnt="14" -->
 ```javascript
 var fs = require('fs'), scanPdfBlk = require('scan-pdf-blocks-pmb');
 
@@ -33,6 +33,7 @@ fs.readFile(exaDir + 'dummy-form.pdf', function (err, fileBytes) {
     indexByOffset: true,
     };
   pdf = scanPdfBlk.parsePdfBuffer(fileBytes, parseOpt);
+  pdf.getBlocksByProp('type', 'xref', -1).parse();
   knownGood.verify(pdf, 'blocks');
 });
 ```

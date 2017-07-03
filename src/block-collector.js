@@ -17,7 +17,7 @@ CF = function BlockCollector() {
   if (!(this instanceof CF)) { return new CF(); }
   var self = this, blks = [];
   self.blocks = blks;
-  this.blockIndexBy = { add: blockIndexAdd };
+  self.blockIndexBy = { add: blockIndexAdd };
 };
 PT = CF.prototype;
 
@@ -51,6 +51,28 @@ PT.readBlobLinesUntil = function (blk, peek, endMark, data) {
   (this.onDecorateBlobBlock || identity)(blk, data, endMark);
   blk.getData = function () { return data; };
   return this.endBlock();
+};
+
+
+PT.getBlocksByProp = function (prop, pVal, skip, howMany) {
+  var ids = (this.blockIndexBy[prop] || false)[pVal], blks = this.blocks;
+  if (!ids) { return false; }
+  skip = (+skip || 0);
+  ids = ids.slice(skip);
+
+  function blkByIdx(idx) {
+    if (idx !== +idx) { return false; }
+    return (blks[idx] || false);
+  }
+
+  if (howMany === undefined) { howMany = null; }
+  if (howMany === null) {
+    // report just one item, w/o array wrapping
+    return blkByIdx(ids[0]);
+  }
+
+  if ((howMany === +howMany) && (howMany > 0)) { ids = ids.slice(0, howMany); }
+  return ids.map(blkByIdx);
 };
 
 

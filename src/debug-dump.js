@@ -15,11 +15,16 @@ EX.jsonify = function (x, opt) {
     return a + b.replace(/\n *($|"(?!fromLine))/g, ' $1', m);
   });
 
-  // compactify blockIndexBy.offset:
-  x = x.replace(/()(\[\n *[\d,\s"…\+\(\)]+)/g, mergeSpace2);
-
+  // unescape univeils unicode escapes:
   x = x.replace(/\n *"preview": "[ -\uFFFF]+"/g,
     function (m) { return m.replace(/\\(\\u)/g, '$1'); });
+
+  // compactify number-arrays like blockIndexBy.offset:
+  x = x.replace(/()(\[\n *\d+[\d,\s"…\+\(\)]+)/g, mergeSpace2);
+
+  // compactify small simple objects (e.g. xref obj)
+  x = x.replace(/(\n {2,16}\{ *)((?:\n +|[ -z]){1,75} *\})/g, mergeSpace2);
+
   return x;
 };
 

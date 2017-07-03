@@ -1,5 +1,5 @@
 { "name": "scan-pdf-blocks-pmb",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Parse the outer structure of some¹ PDF documents, and offer to parse some of the deeper structures. (¹ see readme for supported styles)",
   "keywords": [ "pdf", "portable document format" ],
 
@@ -22,7 +22,7 @@
 
   "dependencies": {
     "getoraddkey-simple": "^0.1.4",
-    "inspect-as-json-pmb": "^0.1.2",
+    "inspect-as-json-pmb": "^0.1.4",
     "string-peeks": "^0.0.9",
     "univeil": "^0.1.9"
   },

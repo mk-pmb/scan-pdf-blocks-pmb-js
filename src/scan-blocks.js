@@ -4,8 +4,8 @@
 
 var EX, makeBlockCollector = require('./block-collector'),
   strPeek = require('string-peeks'),
-  kisi = require('./kitchen-sink'),
-  rxm = kisi.makeRegexpMemoMatcher();
+  kisi = require('./kitchen-sink'), rxm = kisi.makeRegexpMemoMatcher(),
+  parseXref = require('./parse-xref');
 
 
 function numIfNum(s) {
@@ -31,10 +31,12 @@ EX = function scanPdfBlocksInBuffer(pdfBytes, scanOpt) {
     bloCo.blockIndexBy.add('offset', blk.loca.startOffset, bIdx);
   };
   bloCo.onEndBlock = function (blk) {
-    var p = peek.rangeEndPos(blk.loca);
-    blk.loca = { fromByte: p.startOffset, toByte: p.endOffset,
-      lenBytes: p.lenChars,
-      fromLine: p.startLine, toLine: p.endLine, lenLines: p.lenLines };
+    var pos = peek.rangeEndPos(blk.loca), mtd;
+    blk.loca = { fromByte: pos.startOffset, toByte: pos.endOffset,
+      lenBytes: pos.lenChars,
+      fromLine: pos.startLine, toLine: pos.endLine, lenLines: pos.lenLines };
+    mtd = EX['parse_' + blk.type];
+    if (mtd) { blk.parse = mtd; }
   };
   bloCo.onDecorateBlobBlock = (previewBlkData &&
     function (blk, data) { blk.preview = previewBlkData(data); });
@@ -44,6 +46,7 @@ EX = function scanPdfBlocksInBuffer(pdfBytes, scanOpt) {
 
   pdf.blocks = blks;
   pdf.blockIndexBy = blkIdxBy;
+  pdf.getBlocksByProp = bloCo.getBlocksByProp;
   return pdf;
 };
 
@@ -87,6 +90,15 @@ EX.readTopLevelLine = function (peek, bloCo) {
       />>\s*\nstartxref\n\d+\n/);
   }
   return peek.anomaly('unsupBlk', ln);
+};
+
+
+EX.parse_xref = function (data) {
+  var blk = false, xref;
+  if (!data) { blk = this; }
+  xref = parseXref(data || blk.getData());
+  if (blk) { return Object.assign(blk, xref); }
+  return xref;
 };
 
 

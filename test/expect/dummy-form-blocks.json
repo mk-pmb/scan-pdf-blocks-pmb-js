@@ -5,8 +5,8 @@
   "version": "1.5",
   "verMajor": 1,
   "verMinor": 5,
-  "blocks": [ {
-      "type": "%",
+  "blocks": [
+    { "type": "%",
       "loca": { "fromByte": 0, "toByte": 15, "lenBytes": 15,
         "fromLine": 0, "toLine": 2, "lenLines": 2 },
       "preview": "%PDF-1.5\n%µí®û\n",
@@ -89,7 +89,31 @@
       "loca": { "fromByte": 208537, "toByte": 230189, "lenBytes": 21652,
         "fromLine": 10215, "toLine": 11299, "lenLines": 1084 },
       "preview": "xref\n0 1082\n0000000000 65535 f \n0000208272 00000 n \n0000002137 0 … 54 00000 n \n0000208482 00000 n \n",
-      "getData": { "ƒunc": null }
+      "getData": { "ƒunc": null },
+      "parse": { "ƒunc": null },
+      "sections": [
+        { "firstObjNum": 0,
+          "claimedLength": 1082,
+          "obj": [
+            { "id": 0, "section": 0, "offset": 0, "gen": 65535, "flag": "f" },
+            { "id": 1, "section": 0, "offset": 208272, "gen": 0, "flag": "n" },
+            { "id": 2, "section": 0, "offset": 2137, "gen": 0, "flag": "n" },
+            { "id": 3, "section": 0, "offset": 15, "gen": 0, "flag": "n" },
+            { "id": 4, "section": 0, "offset": 2114, "gen": 0, "flag": "n" },
+            { "id": 5, "section": 0, "offset": 197654, "gen": 0, "flag": "n" },
+            { "id": 6, "section": 0, "offset": 3763, "gen": 0, "flag": "n" },
+            { "id": 7, "section": 0, "offset": 208108, "gen": 0, "flag": "n" },
+            "(… +1066 …)",
+            { "id": 1074, "section": 0, "offset": 197823, "gen": 0, "flag": "n" },
+            { "id": 1075, "section": 0, "offset": 206826, "gen": 0, "flag": "n" },
+            { "id": 1076, "section": 0, "offset": 206852, "gen": 0, "flag": "n" },
+            { "id": 1077, "section": 0, "offset": 207373, "gen": 0, "flag": "n" },
+            { "id": 1078, "section": 0, "offset": 207398, "gen": 0, "flag": "n" },
+            { "id": 1079, "section": 0, "offset": 207673, "gen": 0, "flag": "n" },
+            { "id": 1080, "section": 0, "offset": 208354, "gen": 0, "flag": "n" },
+            { "id": 1081, "section": 0, "offset": 208482, "gen": 0, "flag": "n" }
+          ] } ],
+      "getObjById": { "ƒunc": "objById" }
     },
     { "type": "trailer",
       "loca": { "fromByte": 230189, "toByte": 230267, "lenBytes": 78,
@@ -109,7 +133,8 @@
       "%": [ 0, 1084 ],
       "obj": [ 1, 2, 3, 4, 5, 6, 7, 8, "(… +1065 …)", 1074, 1075, 1076, 1077, 1078, 1079, 1080, 1081 ],
       "xref": [ 1082 ],
-      "trailer": [ 1083 ] },
+      "trailer": [ 1083 ]
+    },
     "offset": {
       "0": [ 0 ],
       "15": [ 1 ],
@@ -127,6 +152,9 @@
       "208482": [ 1081 ],
       "208537": [ 1082 ],
       "230189": [ 1083 ],
-      "230267": [ 1084 ] } } }
+      "230267": [ 1084 ]
+    } },
+  "getBlocksByProp": { "ƒunc": null }
+}
 
 ,"§" ]

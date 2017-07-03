@@ -22,6 +22,7 @@ knownGood.verify = function (x, s) { eq.lines(dumpJSON(x), knownGood(s)); };
       indexByOffset: true,
       };
     pdf = scanPdfBlk.parsePdfBuffer(fileBytes, parseOpt);
+    pdf.getBlocksByProp('type', 'xref', -1).parse();
     knownGood.verify(pdf, 'blocks');
   });
   //#r
